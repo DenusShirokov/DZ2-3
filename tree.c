@@ -6,7 +6,7 @@ int svaz(int isk, int* par1, int* par2, int pol, int gl, int dl, int anti) {    
 
   int para;
 
-  if (anti >= 40) {                                                             //если произошло слишком много итераций значит ф-ия наткнулась на цикл
+  if (anti >= 30) {                                                             //если произошло слишком много итераций значит ф-ия наткнулась на цикл
     return(0);
   }
 
@@ -63,7 +63,7 @@ int main(void) {
       return 0;
     }
 
-    if (uk >= (8 * (n - 1))) {
+    if (uk >= ((4 * n) - 1)) {
       ++n;
       versh = (int*) realloc(versh, 8*n*sizeof(int));
       par1 = (int*) realloc(par1, 4*n*sizeof(int));
