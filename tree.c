@@ -56,7 +56,7 @@ int main(void) {
   }
 
 
-  while (fscanf(file1, "%d%[ -]%d\n", &ch1, c, &ch2) != EOF) {
+  while (fscanf(file1, "%d%[ -]%d\n", &ch1, c, &ch2) != EOF) {  //цикл записывает в массивы информацию из файла
 
     if ((ch1 == ch2) || (ch2 == 0) || (ch1 == 0)) {
       printf("Is not tree\n");
@@ -101,13 +101,13 @@ int main(void) {
     ch2 = 0;
   }
 
-  for (int i = 0; i < uk; i++) {
+  for (int i = 0; i < uk; i++) {  //сам не знаю, что это, но без него не работает
     //printf("%d\n", versh[i]);
   }
 
   gl = versh[0];
 
-  for (int i = 1; i < uk; i++) {
+  for (int i = 1; i < uk; i++) { //проверка соединения первой введённой вершины с остальными вершинами
     v = versh[i];
     if (svaz(v, par1, par2, pol, gl, ukp, 0) == 0) {
       printf("Not tree\n");
